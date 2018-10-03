@@ -1,2 +1,2 @@
-# cafe_website
-This is a website for a cafe
+# Cafe Website
+This is a website for a cafe.
