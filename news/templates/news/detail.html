@@ -1,0 +1,13 @@
+{% extends 'mainpage/base.html' %}
+
+{% block content %}
+
+<h1>{{ post.title }}</h1>
+<p>{{ post.text|linebreaks }}</p>
+{% if post.image %}
+<p><a href="{{ post.image.url }}"><img alt="" src="{{ post.image.thumbnail.url }}"/></a></p>
+<p><a href="{{ post.image.url }}"><img alt="" src="{{ post.image.medium.url }}"/></a></p>
+<p><a href="{{ post.image.url }}"><img alt="" src="{{ post.image.large.url }}"/></a></p>
+{% endif %}
+
+{% endblock content %}
