@@ -1,0 +1,35 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <div class="content container">
+        <div class="row">
+            <div class="col-md-8">
+               {% for post in posts %}
+                <div>
+                    {{ post.created_datetime }}
+                </div>
+                <div>
+                    <h1><a href="{% url 'news:detail' pk=post.pk  %}">{{post.title}}</a></h1>
+                    <p>{{ post.text|truncatechars:100 }}</p>
+                    {% if  post.image %}
+                    <p><a href="{{ post.image.url }}"><img alt="" src="{{ post.image.thumbnail.url }}"/></a></p>
+                    {% endif %}
+                </div>
+                {% endfor %}
+            </div>
+
+            <div class="col-md-4">
+                <div>
+                    <h3>記事検索</h3>
+                    <form action="#" method="get">
+                    <div>
+                        <input type="text" id="keyword" name="keyword" placeholder="複数キーワード可"
+                               value="{{ keywords }}">
+                        <button type="submit">検索</button>
+                    </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock content %}
