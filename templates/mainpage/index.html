@@ -24,12 +24,10 @@
                     <!--右側カラム-->
                     <div class="col-md-10">
                         <dl class="row">
-                            <dt class="col-md-3">2018年9月25日</dt>
-                            <dt class="col-md-9">ランチクーポン配布中です</dt>
-                            <dt class="col-md-3">2018年9月22日</dt>
-                            <dt class="col-md-9">季節メニュー追加しました</dt>
-                            <dt class="col-md-3">2018年9月20日</dt>
-                            <dt class="col-md-9">新しいワインを入荷しました</dt>
+                            {% for post in posts %}
+                                <dt class="col-md-3">{{ post.created_datetime }}</dt>
+                                <dt class="col-md-9"><a href="{% url 'news:detail' pk=post.pk  %}">{{post.title}}</a></dt>
+                            {% endfor %}
                         </dl>
                     </div>
                 </div>

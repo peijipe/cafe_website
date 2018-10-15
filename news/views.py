@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from .models import Post
+from news.models import Post
 from django.shortcuts import get_object_or_404
 
 
