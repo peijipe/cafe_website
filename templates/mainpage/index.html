@@ -42,7 +42,7 @@
                     <div class="col-md-8 mb-3">
                         <h3>イタリアンカフェ ACミランについて</h3>
                         <p>イタリア料理ベルコルノでは、ナポリ直送素材を使い特注の薪窯で焼き上げる本格ナポリスタイルのピッツァを中心にお客様の幸せなお食事の時間を過ごしていただけるお店を目指しております。 ご家族、カップル、ご友人、もちろんお一人様でも、お気軽にご利用ください。各種パーティーも承ります。皆様のご来店、スタッフ一同心よりお待ちしております。</p>
-                        <a href="#" class="btn btn-info">メニューを見る</a>
+                        <a href="{% url 'menu:index' %}" class="btn btn-info">メニューを見る</a>
                         <a href="#" class="btn btn-info">店舗情報を見る</a>
                     </div>
                     <div class="col-md-4">
@@ -63,28 +63,71 @@
                 <div class="nav nav-tabs" id="tab-menus" role="tablist">
                     <a class="nav-item nav-link active" id="tab-menu01" data-toggle="tab"
                        href="#panel-menu01" role="tab"
-                       aria-controls="panel-menu01" aria-selected="true">コース</a>
+                       aria-controls="panel-menu01" aria-selected="true">Pizza</a>
                     <a class="nav-item nav-link" id="tab-menu02" data-toggle="tab"
                        href="#panel-menu02" role="tab"
-                       aria-controls="panel-menu02" aria-selected="true">料理</a>
+                       aria-controls="panel-menu02" aria-selected="true">Pasta</a>
                     <a class="nav-item nav-link" id="tab-menu03" data-toggle="tab"
                        href="#panel-menu03" role="tab"
-                       aria-controls="panel-menu03" aria-selected="true">ドリンク</a>
-                    <a class="nav-item nav-link" id="tab-menu04" data-toggle="tab"
-                       href="#panel-menu04" role="tab"
-                       aria-controls="panel-menu04" aria-selected="true">ランチ</a>
+                       aria-controls="panel-menu03" aria-selected="true">Salad</a>
                 </div>
 
                 <!--タブパネル-->
                 <div class="tab-content" id="panel-menus">
                     <div class="tab-pane fade show active border border-top-0" id="panel-menu01"
                     role="tabpanel" aria-labelledby="tab-menu01">
-                        （コースメニューの表）
+
+                    <!-- パネル01 -->
+                      <div class="tab-pane fade show active border border-top-0" id="panel-menu01" role="tabpanel" aria-labelledby="tab-menu01">
+                        <div class="row p-3">
+                          <div class="col-md-7 order-md-2">
+                            <h4>Pizza</h4>
+                            <table class="table table-striped">
+                              <tbody>
+                              {% for pizza in pizzas %}
+                                <tr>
+                                  <th>{{ pizza.title }}</th>
+                                  <td>{{ pizza.price }}</td>
+                                </tr>
+                              {% endfor %}
+                              </tbody>
+                            </table>
+                          </div>
+                          <div class="col-md-5">
+                            <img src="" alt="pizza" class="img-fluid">
+                          </div>
+                        </div>
+                      </div>
                     </div>
+                </div>
+
+                <div class="tab-content" id="panel-menus">
+                    <div class="tab-pane fade show active border border-top-0" id="panel-menu02"
+                    role="tabpanel" aria-labelledby="tab-menu02">
+                    <!-- パネル02 -->
                     <div class="tab-pane fade border border-top-0" id="panel-menu02"
                     role="tabpanel" aria-labelledby="tab-menu02">
-                        （料理メニューの表）
+                        <div class="row p-3">
+                          <div class="col-md-7 order-md-2">
+                            <h4>Pasta</h4>
+                            <table class="table table-striped">
+                              <tbody>
+                              {% for pasta in pastas %}
+                                <tr>
+                                  <th>{{ pasts.title }}</th>
+                                  <td>{{ pasts.price }}</td>
+                                </tr>
+                              {% endfor %}
+                              </tbody>
+                            </table>
+                          </div>
+                          <div class="col-md-5">
+                            <img src="" alt="pasta" class="img-fluid">
+                          </div>
+                        </div>
                     </div>
+                    </div>
+                </div>
                     <div class="tab-pane fade border border-top-0" id="panel-menu03"
                     role="tabpanel" aria-labelledby="tab-menu03">
                         （ドリンクメニューの表）

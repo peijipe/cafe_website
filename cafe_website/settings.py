@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     'mainpage',
     'news',
     'stdimage',
+    'menu',
 ]
 
 MIDDLEWARE = [

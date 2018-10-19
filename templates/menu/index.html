@@ -1,0 +1,78 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+{% load static %}
+
+<main role="main">
+  <section class="jumbotron text-center">
+    <div class="container">
+      <h1 class="jumbotron-heading">Menu List</h1>
+      <p class="lead text-muted">Something short and leading about the collection below—its contents, the creator, etc. Make it short and sweet, but not too short so folks don't simply skip over it entirely.</p>
+    </div>
+  </section>
+
+  <div class="album py-5 bg-light">
+      <div class="container">
+        <p><h2>Pizza</h2></p>
+        <div class="row">
+
+          {% for pizza in pizzas %}
+            <div class="col-md-4">
+              <div class="card mb-4 shadow-sm">
+                <img class="card-img-top" src="{{ pizza.image.thumbnail.url }}" alt="{{pizza.title}}">
+                <div class="card-body">
+                  <p class="card-text">{{ pizza.price }}円</p>
+                </div>
+              </div>
+            </div>
+          {% endfor %}
+        </div>
+
+        <p><h2>Pasta</h2></p>
+        <div class="row">
+          {% for pasta in pastas %}
+            <div class="col-md-4">
+              <div class="card mb-4 shadow-sm">
+                <img class="card-img-top" src="{{ pasta.image.thumbnail.url }}" alt="{{pasta.title}}">
+                <div class="card-body">
+                  <p class="card-text">{{ pasta.price }}円</p>
+                </div>
+              </div>
+            </div>
+          {% endfor %}
+        </div>
+
+        <p><h2>Salad</h2></p>
+        <div class="row">
+          {% for salad in salads %}
+            <div class="col-md-4">
+              <div class="card mb-4 shadow-sm">
+                <img class="card-img-top" src="{{ salad.image.thumbnail.url }}" alt="{{salad.title}}">
+                <div class="card-body">
+                  <p class="card-text">{{ salad.price }}円</p>
+                </div>
+              </div>
+            </div>
+          {% endfor %}
+        </div>
+    </div>
+  </div>
+</main>
+
+
+
+    <div>
+        <p>{{menu.title}}</p>
+        <p>{{ menu.price }}</p>
+        {% if  post.image %}
+        <p><img alt="" src="{{ menu.image.thumbnail.url }}"/></p>
+        {% endif %}
+    </div>
+
+
+{% endblock content %}
+
+
+
+
