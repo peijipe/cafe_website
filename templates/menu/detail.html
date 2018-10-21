@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+    <div class="content container">
+        <div class="row">
+            <div class="col-md-8">
+                {% for course in courses %}
+
+                <h1>{{ course.name }}</h1>
+                <p>{{ course.text|linebreaks }}</p>
+                <a class="btn btn-primary" href="#" role="button">予約する</a>
+                {% endfor %}
+
+            </div>
+
+            <div class="col-md-4">
+
+            </div>
+        </div>
+    </div>
+
+{% endblock content %}

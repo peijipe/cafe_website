@@ -1,18 +1,19 @@
 from django.shortcuts import render
 from menu.models import Menu
+from menu.models import Course
 
 
 def index(request):
     menus = Menu.objects.all()
-
-    # pizzas = Menu.objects.filter(category=1)
-    # pastas = Menu.objects.filter(category=2)
-    # salads = Menu.objects.filter(category=3)
-
-    context = {'menus': menus,
-               # 'pizzas': pizzas,
-               # 'pastas': pastas,
-               # 'salads': salads
+    courses = Course.objects.all()
+    context = {
+                'menus': menus,
+                'courses': courses
                }
 
     return render(request, 'menu/index.html', context)
+
+
+def detail(request):
+    courses = Course.objects.all()
+    return render(request, 'menu/detail.html', {'courses': courses})

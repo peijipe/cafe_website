@@ -14,6 +14,26 @@
 
   <div class="album py-5 bg-light">
       <div class="container">
+        <p><h2>Course</h2></p>
+        <div class="row">
+
+          {% for course in courses %}
+            <div class="col-md-4">
+              <div class="card mb-4 shadow-sm">
+                <div class="card-body">
+                  <p class="card-text">{{ course.name }}</p>
+                  <a href="{% url 'menu:detail' %}">コース詳細</a>
+                </div>
+              </div>
+            </div>
+          {% endfor %}
+
+        </div>
+    </div>
+  </div>
+
+  <div class="album py-5 bg-light">
+      <div class="container">
         <p><h2>Pizza</h2></p>
         <div class="row">
 
@@ -23,7 +43,7 @@
               <div class="card mb-4 shadow-sm">
                 <img class="card-img-top" src="{{ menu.image.thumbnail.url }}" alt="{{menu.title}}">
                 <div class="card-body">
-                  <p class="card-text">{{ menu.price }}円</p>
+                  <p class="card-text">{{ menu.title }}　{{ menu.price }}円</p>
                 </div>
               </div>
             </div>
@@ -40,7 +60,7 @@
               <div class="card mb-4 shadow-sm">
                 <img class="card-img-top" src="{{ menu.image.thumbnail.url }}" alt="{{menu.title}}">
                 <div class="card-body">
-                  <p class="card-text">{{ menu.price }}円</p>
+                  <p class="card-text">{{ menu.title }}　{{ menu.price }}円</p>
                 </div>
               </div>
             </div>
@@ -56,7 +76,7 @@
               <div class="card mb-4 shadow-sm">
                 <img class="card-img-top" src="{{ menu.image.thumbnail.url }}" alt="{{menu.title}}">
                 <div class="card-body">
-                  <p class="card-text">{{ menu.price }}円</p>
+                  <p class="card-text">{{ menu.title }}　{{ menu.price }}円</p>
                 </div>
               </div>
             </div>
