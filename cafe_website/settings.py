@@ -41,7 +41,8 @@ INSTALLED_APPS = [
     'news',
     'stdimage',
     'menu',
-    'django_extensions',
+    'reserve',
+    'tempus_dominus',
 ]
 
 MIDDLEWARE = [
