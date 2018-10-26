@@ -82,23 +82,22 @@
                             <h4>Pizza</h4>
                             <table class="table table-striped">
                               <tbody>
-                              {% for pizza in pizzas %}
+                              {% for menu in menus %}
+                              {% if  menu.category == "pizza" %}
                                 <tr>
-                                  <th>{{ pizza.title }}</th>
-                                  <td>{{ pizza.price }}</td>
+                                  <th>{{ menu.title }}</th>
+                                  <td>{{ menu.price }}</td>
                                 </tr>
+                              {% endif %}
                               {% endfor %}
                               </tbody>
                             </table>
                           </div>
                           <div class="col-md-5">
-                            <img src="" alt="pizza" class="img-fluid">
+                            <img src="{% static 'image/pizza01.thumbnail.JPG' %}" alt="pizza" class="img-fluid">
                           </div>
                         </div>
                       </div>
-
-
-
 
                     <!-- パネル02 -->
                     <div class="tab-pane fade border border-top-0" id="panel-menu02"
@@ -108,24 +107,45 @@
                             <h4>Pasta</h4>
                             <table class="table table-striped">
                               <tbody>
-                              {% for pasta in pastas %}
+                              {% for menu in menus %}
+                              {% if  menu.category == "pasta" %}
                                 <tr>
-                                  <th>{{ pasts.title }}</th>
-                                  <td>{{ pasts.price }}</td>
+                                  <th>{{ menu.title }}</th>
+                                  <td>{{ menu.price }}</td>
                                 </tr>
+                              {% endif %}
                               {% endfor %}
                               </tbody>
                             </table>
                           </div>
                           <div class="col-md-5">
-                            <img src="" alt="pasta" class="img-fluid">
+                            <img src="{% static 'image/pasta01.thumbnail.JPG' %}" alt="pasta" class="img-fluid">
                           </div>
                         </div>
                     </div>
 
                     <div class="tab-pane fade border border-top-0" id="panel-menu03"
                     role="tabpanel" aria-labelledby="tab-menu03">
-                        （ドリンクメニューの表）
+                        <div class="row p-3">
+                          <div class="col-md-7 order-md-2">
+                            <h4>Salad</h4>
+                            <table class="table table-striped">
+                              <tbody>
+                              {% for menu in menus %}
+                              {% if  menu.category == "salad" %}
+                                <tr>
+                                  <th>{{ menu.title }}</th>
+                                  <td>{{ menu.price }}</td>
+                                </tr>
+                              {% endif %}
+                              {% endfor %}
+                              </tbody>
+                            </table>
+                          </div>
+                          <div class="col-md-5">
+                            <img src="{% static 'image/salad01.thumbnail.JPG' %}" alt="salad" class="img-fluid">
+                          </div>
+                        </div>
                     </div>
                 </div>
             </div>
