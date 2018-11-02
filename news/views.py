@@ -24,5 +24,5 @@ def index(request):
 
 def detail(request, pk):
     post = get_object_or_404(Post, pk=pk)
-    return render(request, 'news/detail.html', {"post": post})
+    return render(request, 'news/reserve_confirm.html', {"post": post})
 

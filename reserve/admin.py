@@ -1,3 +1,19 @@
 from django.contrib import admin
+from .models import Reserve, Customer, Course, Status
 
-# Register your models here.
+
+class ReserveAdmin(admin.ModelAdmin):
+    admin.site.register(Reserve)
+
+
+class Customer(admin.ModelAdmin):
+    admin.site.register(Customer)
+
+
+class Course(admin.ModelAdmin):
+    admin.site.register(Course)
+
+
+class Status(admin.ModelAdmin):
+    admin.site.register(Status)
+

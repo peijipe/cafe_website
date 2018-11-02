@@ -1,8 +1,39 @@
-from django.shortcuts import render
-from menu.models import Course
+from django.shortcuts import render, redirect
+from .models import Reserve
+from django.shortcuts import get_object_or_404
+
+from .forms import ResForm
 
 
+# 予約一覧
 def index(request):
-    courses = Course.objects.all()
-    return render(request, 'reserve/index.html', {'courses': courses})
+    reserves = Reserve.objects.all().order_by('-datetime')
+    return render(request, 'reserve/index.html', {'reserves': reserves})
 
+
+# 予約詳細
+def detail(request, reserve_id):
+    reserve = get_object_or_404(Reserve, id=reserve_id)
+    return render(request, 'reserve/detail.html', {'reserve': reserve})
+
+
+# 新規予約
+def reserve_new(request):
+    if request.method == "POST":
+        form = ResForm(request.POST)
+        if form.is_valid():
+            form.save()
+            return redirect('reserve:index')
+    else:
+        form = ResForm()
+    return render(request, 'reserve/reserve_new.html', {'form': form})
+
+# 予約変更
+
+
+# 予約取消
+
+# 予約前確認画面
+def confirm(request):
+    form = ResForm()
+    return render(request, 'reserve/reserve_confirm.html', {'form': form})

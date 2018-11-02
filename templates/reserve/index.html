@@ -1,62 +1,17 @@
-
-
-
-
 {% extends 'base.html' %}
 
 {% block content %}
 
 {% load static %}
 
-<div role="main">
-    <div class="container">
-        <div class="reserve_date">
-            <h2>予約日時</h2>
-                <!-- 日付入力 -->
-                <input type="date"></input>
-        </div>
+<a class="btn" href="{% url 'reserve:new_reserve' %}">新規予約</a>
 
-
-        <div class="reserve_content">
-            <div class="row">
-                <div class="col-md-6">
-                    <h2>コース</h2>
-
-                    {% for course in courses %}
-                    <div class="form-check">
-                      <input class="form-check-input" type="radio" name="exampleRadios" value="option2">
-                      <label class="form-check-label">
-                        {{ course.name }}
-                      </label>
-                    </div>
-                    {% endfor %}
-                </div>
-                <div class="col-md-6">
-                    <h2>予約人数</h2>
-
-                    <div class="dropdown">
-                        <select id="" name="">
-                            <option>2名</option>
-                            <option>3名</option>
-                            <option>4名</option>
-                            <option>5名</option>
-                            <option>6名</option>
-                            <option>7名</option>
-                            <option>8名</option>
-                            <option>9名</option>
-                            <option>10名</option>
-                        </select>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div>
-            <br><br>
-            <p><a class="btn btn-primary" href="#" role="button">予約確認画面へ</a></p>
-        </div>
-    </div>
-
-</div>
+{% for reserve in reserves %}
+<a href="{% url 'reserve:detail' reserve.id %}" class="reserve-title">
+  <div>
+    {{ reserve }}
+  </div>
+</a>
+{% endfor %}
 
 {% endblock content %}

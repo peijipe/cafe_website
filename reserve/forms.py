@@ -1,33 +1,58 @@
-import datetime
-
 from django import forms
-from tempus_dominus.widgets import DatePicker, TimePicker, DateTimePicker
+
+from django.forms import ModelForm
+from .models import Reserve
 
 
-class MyForm(forms.Form):
-    date_field = forms.DateField(widget=DatePicker())
-    date_field_required_with_min_max_date = forms.DateField(
-        required=True,
-        widget=DatePicker(
-            options={
-                'minDate': '2009-01-20',
-                'maxDate': '2017-01-20',
-            }
-        ),
-    )
-    time_field = forms.TimeField(
-        widget=TimePicker(
-            options={
-                'enabledHours': [9, 10, 11, 12, 13, 14, 15, 16],
-            }
-        ),
-    )
-    datetime_field = forms.DateTimeField(
-        widget=DateTimePicker(
-            options={
-                'minDate': (datetime.date.today() + datetime.timedelta(days=1)).strftime('%Y-%m-%d'),  # Tomorrow
-                'useCurrent': True,
-                'collapse': False,
-            }
-        ),
-    )
+class ResForm(ModelForm):
+    class Meta:
+        model = Reserve
+        fields = "__all__"
+
+
+# EMPTY_CHOICES = (
+#     ('', '-'*10),
+# )
+#
+# NUM_CHOICES = (
+#     ('2', '2名'),
+#     ('3', '3名'),
+#     ('4', '4名'),
+# )
+#
+# COURSE_CHOICES = (
+#     ('courseA', 'Aコース'),
+#     ('courseB', 'Bコース'),
+#     ('tables', '席のみ'),
+# )
+#
+#
+# class ReserveForm(forms.Form):
+#     # date = forms.DateField(
+#     #     label='日時',
+#     #     required=True,
+#     #     input_formats=[
+#     #         '%Y-%m-%d',  # 2018-10-10
+#     #     ]
+#     # )
+#
+#     num = forms.ChoiceField(
+#         label='人数',
+#         widget=forms.Select,
+#         choices=EMPTY_CHOICES + NUM_CHOICES,
+#         required=True,
+#     )
+#
+#     course = forms.ChoiceField(
+#         label='コース',
+#         widget=forms.RadioSelect,
+#         choices=COURSE_CHOICES,
+#         required=True,
+#     )
+#
+#     comment = forms.CharField(
+#         label='備考',
+#         max_length=1000,
+#         required=False,
+#         widget=forms.TextInput()
+#     )

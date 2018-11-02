@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+{% load static %}
+
+<div>
+  <a href="{% url 'reserve:index' %}">予約ホームに戻る</a>
+</div>
+
+<h2>{{ reserve.date }}</h2>
+<div>
+  <!--{{ reserve.name }}-->
+  {{ reserve.date }}
+  {{ reserve.num }}
+  {{ reserve.course}}
+  {{ reserve.comment }}
+</div>
+
+{% endblock content %}
