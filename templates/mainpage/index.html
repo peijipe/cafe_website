@@ -83,7 +83,7 @@
                             <table class="table table-striped">
                               <tbody>
                               {% for menu in menus %}
-                              {% if  menu.category == "pizza" %}
+                              {% if  menu.category_id == 1 %}
                                 <tr>
                                   <th>{{ menu.title }}</th>
                                   <td>{{ menu.price }}</td>
@@ -108,7 +108,7 @@
                             <table class="table table-striped">
                               <tbody>
                               {% for menu in menus %}
-                              {% if  menu.category == "pasta" %}
+                              {% if  menu.category_id == 2 %}
                                 <tr>
                                   <th>{{ menu.title }}</th>
                                   <td>{{ menu.price }}</td>
@@ -132,7 +132,7 @@
                             <table class="table table-striped">
                               <tbody>
                               {% for menu in menus %}
-                              {% if  menu.category == "salad" %}
+                              {% if  menu.category_id == 3 %}
                                 <tr>
                                   <th>{{ menu.title }}</th>
                                   <td>{{ menu.price }}</td>
@@ -171,7 +171,7 @@
                     <tbody>
                       <tr>
                         <th>店名</th>
-                        <td>Mr.M COFFEE</td>
+                        <td>イタリアンカフェ ACミラン</td>
                       </tr>
                       <tr>
                         <th>住所</th>
