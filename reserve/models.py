@@ -12,7 +12,7 @@ class Reserve(models.Model):
     updated_datetime = models.DateTimeField(auto_now=True)
 
     def __str__(self):
-        return self.name_id
+        return self.name.name
 
 
 class Customer(models.Model):

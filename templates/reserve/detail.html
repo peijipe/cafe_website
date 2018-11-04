@@ -10,11 +10,13 @@
 
 <h2>{{ reserve.date }}</h2>
 <div>
-  <!--{{ reserve.name }}-->
+  {{ reserve.name }}
   {{ reserve.date }}
   {{ reserve.num }}
-  {{ reserve.course}}
+  {{ reserve.course.name}}
+  {{ reserve.course.created_datetime }}
   {{ reserve.comment }}
+  <!--{{ reserve.customer.name}}-->
 </div>
 
 {% endblock content %}
