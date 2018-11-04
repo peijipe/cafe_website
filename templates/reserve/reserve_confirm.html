@@ -4,9 +4,9 @@
 
 {% load static %}
 
-{{ form }}
+    {{ form.name }}
 
 <input class="btn btn-primary" type="submit" value="確定">
-<a class="btn btn-secondary" href="{% url 'reserve:index' %}" role="button">戻る</a>
+<a class="btn btn-secondary" href="{% url 'reserve:new_reserve' %}" role="button">戻る</a>
 
 {% endblock content %}

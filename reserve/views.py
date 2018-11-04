@@ -23,8 +23,8 @@ def reserve_new(request):
     if request.method == "POST":
         form = ReserveForm(request.POST)
         if form.is_valid():
-            form.save()
-            return redirect('reserve:index')
+            # form.save()
+            return redirect('reserve:confirm_reserve')
     else:
         form = ReserveForm()
     return render(request, 'reserve/reserve_new.html', {'form': form})
@@ -35,6 +35,6 @@ def reserve_new(request):
 # 予約取消
 
 # 予約前確認画面
-def confirm(request):
-    form = ReserveForm()
+def reserve_confirm(request):
+    form = ReserveForm(request.POST)
     return render(request, 'reserve/reserve_confirm.html', {'form': form})

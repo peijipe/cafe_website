@@ -35,11 +35,11 @@ class ReserveForm(forms.Form):
         widget=forms.TextInput()
     )
 
-    datetime = forms.DateTimeField(
-        label='日時',
-        required=True,
-        widget=forms.DateInput(attrs={"type": "datetime-local"})
-    )
+    # datetime = forms.DateTimeField(
+    #     label='日時',
+    #     required=True,
+    #     widget=forms.DateInput(attrs={"type": "datetime-local"})
+    # )
 
     num = forms.ChoiceField(
         label='人数',
