@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import Reserve, Customer, Course, Status
+from .models import Reserve, Customer, Course, Status, Res
 
 
 class ReserveAdmin(admin.ModelAdmin):
@@ -17,3 +17,6 @@ class Course(admin.ModelAdmin):
 class Status(admin.ModelAdmin):
     admin.site.register(Status)
 
+
+class ReserveAdmin(admin.ModelAdmin):
+    admin.site.register(Res)

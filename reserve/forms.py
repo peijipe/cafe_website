@@ -1,14 +1,5 @@
 from django import forms
 
-from django.forms import ModelForm
-from .models import Reserve
-
-
-# class ResForm(ModelForm):
-#     class Meta:
-#         model = Reserve
-#         fields = "__all__"
-
 
 EMPTY_CHOICES = (
     ('', '-'*10),
@@ -27,10 +18,10 @@ COURSE_CHOICES = (
 )
 
 
-class ReserveForm(forms.Form):
+class ResForm(forms.Form):
     name = forms.CharField(
-        label='予約者氏名',
-        max_length=150,
+        label='名前',
+        max_length=20,
         required=True,
         widget=forms.TextInput()
     )
@@ -38,7 +29,8 @@ class ReserveForm(forms.Form):
     datetime = forms.DateTimeField(
         label='日時',
         required=True,
-        widget=forms.DateInput(attrs={"type": "datetime-local"})
+        widget=forms.DateTimeInput(attrs={"type": "datetime-local"}),
+        input_formats=['%Y-%m-%dT%H:%M']
     )
 
     num = forms.ChoiceField(

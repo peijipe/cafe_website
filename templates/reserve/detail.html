@@ -8,14 +8,16 @@
   <a href="{% url 'reserve:index' %}">予約ホームに戻る</a>
 </div>
 
-<h2>{{ reserve.date }}</h2>
+<!--※予約詳細は管理者のみ見れるようにしたい-->
+<p>予約詳細</p>
 <div>
-  {{ reserve.name }}
-  {{ reserve.date }}
-  {{ reserve.num }}
-  {{ reserve.course.name}}
-  {{ reserve.course.created_datetime }}
-  {{ reserve.comment }}
+  <ul>
+    <li>名前:{{ reserve.name }}</li>
+    <li>日時:{{ reserve.datetime }}</li>
+    <li>人数:{{ reserve.num }}</li>
+    <li>コース:{{ reserve.course}}</li>
+    <li>備考:{{ reserve.comment }}</li>
+  </ul>
 </div>
 
 {% endblock content %}

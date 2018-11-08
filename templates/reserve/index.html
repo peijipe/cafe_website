@@ -6,10 +6,13 @@
 
 <a class="btn" href="{% url 'reserve:new_reserve' %}">新規予約</a>
 
+<!--※予約一覧は管理者のみ見れるようにしたい-->
+<p>予約一覧</p>
 {% for reserve in reserves %}
 <a href="{% url 'reserve:detail' reserve.id %}" class="reserve-title">
   <div>
-    {{ reserve }}
+    名前:{{ reserve.name }}
+    日時:{{ reserve.datetime }}
   </div>
 </a>
 {% endfor %}
