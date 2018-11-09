@@ -1,8 +1,9 @@
 from django.shortcuts import render, redirect
-from .models import Reserve, Res
+from .models import Res
 from django.shortcuts import get_object_or_404
 
 from .forms import ResForm
+
 
 # 予約一覧
 def index(request):
@@ -20,7 +21,6 @@ def detail(request, reserve_id):
 def reserve_new(request):
     form = ResForm(request.POST or None)
     if form.is_valid():
-        print('form_validation')
         res = Res()
         res.name = form.cleaned_data['name']
         res.datetime = form.cleaned_data['datetime']
@@ -41,6 +41,43 @@ def reserve_new(request):
 
 
 # 予約変更
+def edit(request, reserve_id):
+    reserve = get_object_or_404(Res, pk=reserve_id)
+
+    if request.method == 'POST':
+        form = ResForm(request.POST)
+        if form.is_valid():
+            res = Res()
+            res.name = form.cleaned_data['name']
+            res.datetime = form.cleaned_data['datetime']
+            res.num = form.cleaned_data['num']
+            res.course = form.cleaned_data['course']
+            res.comment = form.cleaned_data['comment']
+
+            Res.objects.get(pk=reserve_id).update(
+                name=res.name,
+                datetime=res.datetime,
+                num=res.num,
+                course=res.course,
+                comment=res.comment,
+            )
+            print(Res.objects.get(pk=reserve_id))
+            return redirect('reserve:detail', pk=reserve.id)
+
+    else:
+        print(reserve.name)
+        print(reserve.datetime)
+        data = {
+            'name': reserve.name,
+            'datetime': reserve.datetime,
+            'num': reserve.num,
+            'course': reserve.course,
+            'comment': reserve.comment,
+            }
+        form = ResForm(data)
+
+    return render(request, 'reserve/edit.html', {'form': form})
+
 
 # 予約取消
 

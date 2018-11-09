@@ -2,8 +2,8 @@ from django.contrib import admin
 from .models import Reserve, Customer, Course, Status, Res
 
 
-class ReserveAdmin(admin.ModelAdmin):
-    admin.site.register(Reserve)
+# class ReserveAdmin(admin.ModelAdmin):
+#     admin.site.register(Reserve)
 
 
 class Customer(admin.ModelAdmin):

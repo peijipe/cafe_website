@@ -2,19 +2,31 @@
 
 {% block content %}
 
-{% load static %}
-
 <a class="btn" href="{% url 'reserve:new_reserve' %}">新規予約</a>
 
 <!--※予約一覧は管理者のみ見れるようにしたい-->
 <p>予約一覧</p>
-{% for reserve in reserves %}
-<a href="{% url 'reserve:detail' reserve.id %}" class="reserve-title">
-  <div>
-    名前:{{ reserve.name }}
-    日時:{{ reserve.datetime }}
-  </div>
-</a>
-{% endfor %}
+
+<table border="1">
+      <thead>
+        <tr>
+          <th>name</th>
+          <th>date</th>
+          <th>　</th>{# 追加する #}
+        </tr>
+      </thead>
+      <tbody>
+        {% for reserve in reserves %}
+          <tr>
+            <td><a href="{% url 'reserve:detail' reserve.id %}">{{ reserve.name }}</a></td>
+            <td>{{ reserve.datetime }}</td>
+            <td><a href="{% url 'reserve:edit' reserve.id %}">更新画面へ</a></td>{# 追加する #}
+          </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+
+
+
 
 {% endblock content %}
