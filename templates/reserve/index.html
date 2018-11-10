@@ -12,7 +12,7 @@
         <tr>
           <th>name</th>
           <th>date</th>
-          <th>　</th>{# 追加する #}
+          <th>　</th>
         </tr>
       </thead>
       <tbody>
@@ -20,7 +20,7 @@
           <tr>
             <td><a href="{% url 'reserve:detail' reserve.id %}">{{ reserve.name }}</a></td>
             <td>{{ reserve.datetime }}</td>
-            <td><a href="{% url 'reserve:edit' reserve.id %}">更新画面へ</a></td>{# 追加する #}
+            <td><a href="{% url 'reserve:edit' reserve.id %}">更新画面へ</a></td>
           </tr>
         {% endfor %}
       </tbody>

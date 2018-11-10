@@ -8,7 +8,7 @@
   <a href="{% url 'reserve:index' %}">予約ホームに戻る</a>
 </div>
 <table>
-  <form method="post" action="{% url 'reserve:new_reserve' %}">
+  <form method="post" action="{% url 'reserve:edit' reserve_id %}">
     {% csrf_token %}
 
     {{ form.as_table }}

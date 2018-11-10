@@ -1,7 +1,6 @@
 from django.shortcuts import render, redirect
 from .models import Res
 from django.shortcuts import get_object_or_404
-
 from .forms import ResForm
 
 
@@ -54,29 +53,27 @@ def edit(request, reserve_id):
             res.course = form.cleaned_data['course']
             res.comment = form.cleaned_data['comment']
 
-            Res.objects.get(pk=reserve_id).update(
+            Res.objects.filter(pk=reserve_id).update(
                 name=res.name,
                 datetime=res.datetime,
                 num=res.num,
                 course=res.course,
                 comment=res.comment,
             )
-            print(Res.objects.get(pk=reserve_id))
-            return redirect('reserve:detail', pk=reserve.id)
+            reserve = get_object_or_404(Res, pk=reserve_id)
+            return render(request, 'reserve/detail.html', {'reserve': reserve})
 
     else:
-        print(reserve.name)
-        print(reserve.datetime)
         data = {
             'name': reserve.name,
-            'datetime': reserve.datetime,
+            'datetime': reserve.datetime.strftime('%Y-%m-%dT%H:%M'),  # 日時と時刻の間にTを入れる
             'num': reserve.num,
             'course': reserve.course,
             'comment': reserve.comment,
             }
         form = ResForm(data)
 
-    return render(request, 'reserve/edit.html', {'form': form})
+    return render(request, 'reserve/edit.html', {'form': form, 'reserve_id': reserve_id})
 
 
 # 予約取消
