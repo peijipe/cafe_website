@@ -77,5 +77,10 @@ def edit(request, reserve_id):
 
 
 # 予約取消
+def delete(request, reserve_id):
+    reserve = get_object_or_404(Res, id=reserve_id)
+    if request.method == 'POST':
+        reserve.delete()
+        return redirect('reserve:index')
+    return render(request, 'reserve/delete.html', {'reserve': reserve})
 
-# 予約前確認画面

@@ -13,6 +13,7 @@
           <th>name</th>
           <th>date</th>
           <th>　</th>
+          <th>　</th>
         </tr>
       </thead>
       <tbody>
@@ -20,7 +21,8 @@
           <tr>
             <td><a href="{% url 'reserve:detail' reserve.id %}">{{ reserve.name }}</a></td>
             <td>{{ reserve.datetime }}</td>
-            <td><a href="{% url 'reserve:edit' reserve.id %}">更新画面へ</a></td>
+            <td><a href="{% url 'reserve:edit' reserve.id %}">更新</a></td>
+            <td><a href="{% url 'reserve:delete' reserve.id %}">キャンセル</a></td>
           </tr>
         {% endfor %}
       </tbody>

@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<div>
+  <a href="{% url 'reserve:index' %}">予約ホームに戻る</a>
+</div>
+<table>
+    <tr><th>名前</th><td>{{ reserve.name }}</td></tr>
+    <tr><th>日時</th><td>{{ reserve.datetime }}</td></tr>
+    <tr><th>人数</th><td>{{ reserve.num }}</td></tr>
+    <tr><th>コース</th><td>{{ reserve.course }}</td></tr>
+    <tr><th>コメント</th><td>{{ reserve.comment }}</td></tr>
+</table>
+<p>削除してよろしいですか？</p>
+<form method="POST" action="">
+{% csrf_token %}
+<button type="submit">削除</button>
+</form>
+
+{% endblock %}
