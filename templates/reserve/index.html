@@ -5,13 +5,17 @@
 <a class="btn" href="{% url 'reserve:new_reserve' %}">新規予約</a>
 
 <!--※予約一覧は管理者のみ見れるようにしたい-->
+<!--ユーザー自身の予約は見れるようにしたい-->
 <p>予約一覧</p>
 
 <table border="1">
       <thead>
         <tr>
-          <th>name</th>
-          <th>date</th>
+          <th>名前</th>
+          <th>日時</th>
+          <th>人数</th>
+          <th>コース有無</th>
+          <th>備考</th>
           <th>　</th>
           <th>　</th>
         </tr>
@@ -21,14 +25,14 @@
           <tr>
             <td><a href="{% url 'reserve:detail' reserve.id %}">{{ reserve.name }}</a></td>
             <td>{{ reserve.datetime }}</td>
+            <td>{{ reserve.num }}</td>
+            <td>{{ reserve.course }}</td>
+            <td>{{ reserve.comment }}</td>
             <td><a href="{% url 'reserve:edit' reserve.id %}">更新</a></td>
             <td><a href="{% url 'reserve:delete' reserve.id %}">キャンセル</a></td>
           </tr>
         {% endfor %}
       </tbody>
-    </table>
-
-
-
+</table>
 
 {% endblock content %}

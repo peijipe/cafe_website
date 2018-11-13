@@ -4,20 +4,19 @@
 
 {% load static %}
 
+<!--※予約詳細は管理者&ユーザー自身のみ見れるようにしたい-->
 <div>
   <a href="{% url 'reserve:index' %}">予約ホームに戻る</a>
 </div>
+<table>
+    <tr><th>名前</th><td>{{ reserve.name }}</td></tr>
+    <tr><th>日時</th><td>{{ reserve.datetime }}</td></tr>
+    <tr><th>人数</th><td>{{ reserve.num }}</td></tr>
+    <tr><th>コース</th><td>{{ reserve.course }}</td></tr>
+    <tr><th>コメント</th><td>{{ reserve.comment }}</td></tr>
+</table>
 
-<!--※予約詳細は管理者のみ見れるようにしたい-->
-<p>予約詳細</p>
-<div>
-  <ul>
-    <li>名前:{{ reserve.name }}</li>
-    <li>日時:{{ reserve.datetime }}</li>
-    <li>人数:{{ reserve.num }}</li>
-    <li>コース:{{ reserve.course}}</li>
-    <li>備考:{{ reserve.comment }}</li>
-  </ul>
-</div>
+<a class="btn btn-primary" href="{% url 'reserve:edit' reserve.id %}" role="button">更新する</a>
+<a class="btn btn-danger" href="{% url 'reserve:delete' reserve.id %}" role="button">キャンセル</a>
 
 {% endblock content %}
