@@ -13,7 +13,10 @@ def index(request):
 # 予約詳細
 def detail(request, reserve_id):
     reserve = get_object_or_404(Res, id=reserve_id)
-    return render(request, 'reserve/detail.html', {'reserve': reserve})
+    if request.method == 'POST':
+        reserve.delete()
+        return redirect('reserve:index')
+    return render(request, 'reserve/detail.html', {'reserve': reserve, 'reserve_id': reserve_id})
 
 
 # 新規予約
