@@ -2,37 +2,39 @@
 
 {% block content %}
 
-<a class="btn" href="{% url 'reserve:new_reserve' %}">新規予約</a>
-
 <!--※予約一覧は管理者のみ見れるようにしたい-->
 <!--ユーザー自身の予約は見れるようにしたい-->
-<p>予約一覧</p>
 
-<table border="1">
-      <thead>
+<div class="container">
+<h2>予約一覧</h2>
+
+<table class="table">
+    <thead>
         <tr>
-          <th>名前</th>
-          <th>日時</th>
-          <th>人数</th>
-          <th>コース有無</th>
-          <th>備考</th>
-          <th>　</th>
-          <th>　</th>
+            <th>名前</th>
+            <th>日時</th>
+            <th>人数</th>
+            <th>コース有無</th>
+            <th>備考</th>
+            <th></th>
         </tr>
-      </thead>
-      <tbody>
+    </thead>
+    <tbody>
         {% for reserve in reserves %}
-          <tr>
-            <td><a href="{% url 'reserve:detail' reserve.id %}">{{ reserve.name }}</a></td>
+        <tr>
+            <th><a href="{% url 'reserve:detail' reserve.id %}">{{ reserve.name }}</a></th>
             <td>{{ reserve.datetime }}</td>
             <td>{{ reserve.num }}</td>
             <td>{{ reserve.course }}</td>
             <td>{{ reserve.comment }}</td>
-            <td><a href="{% url 'reserve:edit' reserve.id %}">更新</a></td>
-            <td><a href="{% url 'reserve:delete' reserve.id %}">キャンセル</a></td>
-          </tr>
+            <td><a class="btn btn-info" href="{% url 'reserve:detail' reserve.id %}" role="button">詳細</a></td>
+        </tr>
         {% endfor %}
-      </tbody>
+    </tbody>
 </table>
+
+<a class="btn btn-primary" href="{% url 'reserve:new_reserve' %}">新規予約</a>
+
+</div>
 
 {% endblock content %}

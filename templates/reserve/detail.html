@@ -5,21 +5,40 @@
 {% load static %}
 
 <!--※予約詳細は管理者&ユーザー自身のみ見れるようにしたい-->
-<div>
-  <a href="{% url 'reserve:index' %}">予約ホームに戻る</a>
+
+<div class="container">
+  <h2 class="mb-3">予約詳細</h2>
+  <table class="table">
+    <tbody>
+      <tr>
+        <th>名前</th>
+        <td>{{ reserve.name }}</td>
+      </tr>
+      <tr>
+        <th>日時</th>
+        <td>{{ reserve.datetime }}</td>
+      </tr>
+      <tr>
+        <th>人数</th>
+        <td>{{ reserve.num }}</td>
+      </tr>
+      <tr>
+        <th>コース</th>
+        <td>{{ reserve.course }}</td>
+      </tr>
+      <tr>
+        <th>備考</th>
+        <td>{{ reserve.comment }}</td>
+      </tr>
+    </tbody>
+  </table>
+
+    <a class="btn btn-primary" href="{% url 'reserve:edit' reserve.id %}" role="button">更新する</a>
+
+    <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#modal01">削除</button>
+    <a href="{% url 'reserve:index' %}">予約ホームに戻る</a>
+
 </div>
-<table>
-    <tr><th>名前</th><td>{{ reserve.name }}</td></tr>
-    <tr><th>日時</th><td>{{ reserve.datetime }}</td></tr>
-    <tr><th>人数</th><td>{{ reserve.num }}</td></tr>
-    <tr><th>コース</th><td>{{ reserve.course }}</td></tr>
-    <tr><th>コメント</th><td>{{ reserve.comment }}</td></tr>
-</table>
-
-<a class="btn btn-primary" href="{% url 'reserve:edit' reserve.id %}" role="button">更新する</a>
-
-<button type="button" class="btn btn-danger" data-toggle="modal" data-target="#modal01">削除</button>
-
 
 <div class="modal fade" id="modal01" tabindex="-1" role="dialog" aria-labelledby="modal01-label" aria-hidden="true">
   <div class="modal-dialog modal-dialog-centered" role="document">

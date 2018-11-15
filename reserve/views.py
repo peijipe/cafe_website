@@ -64,7 +64,7 @@ def edit(request, reserve_id):
                 comment=res.comment,
             )
             reserve = get_object_or_404(Res, pk=reserve_id)
-            return render(request, 'reserve/detail.html', {'reserve': reserve})
+            return render(request, 'reserve/detail.html', {'reserve': reserve, 'reserve_id': reserve_id})
 
     else:
         data = {
