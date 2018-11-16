@@ -13,46 +13,24 @@
     </div>
   </div>
 
-  <div class="container">
-    <!-- Example row of columns -->
-    <div class="row">
-        {% for post in posts %}
-        <div class="col-md-4">
-            <h2>{{post.title}}</h2>
-            <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
-            <p><a class="btn btn-secondary" href="{% url 'news:detail' pk=post.pk  %}" role="button">View details &raquo;</a></p>
-        </div>
-        {% endfor %}
-    </div>
-
-    <hr>
-  </div>
-</main>
-
-
     <div class="content container">
         <div class="row">
             <div class="col-md-8">
-               {% for post in posts %}
-                <div>
-                    {{ post.created_datetime }}
-                </div>
-                <div>
-                    <h1><a href="{% url 'news:detail' pk=post.pk  %}">{{post.title}}</a></h1>
-                    <p>{{ post.text|truncatechars:100 }}</p>
+                {% for post in posts %}
+                    <h2>{{ post.title }}</h2>
+                    <p>{{ post.text | truncatechars:20  }}</p>
                     {% if  post.image %}
-                    <p><a href="{{ post.image.url }}"><img alt="" src="{{ post.image.thumbnail.url }}"/></a></p>
+                    <p><img alt="" src="{{ post.image.thumbnail.url }}"/></p>
                     {% endif %}
-                </div>
+                    <p><a class="btn btn-secondary" href="{% url 'news:detail' pk=post.pk  %}" role="button">View details &raquo;</a></p>
                 {% endfor %}
             </div>
-
             <div class="col-md-4">
                 <div>
                     <h3>記事検索</h3>
                     <form action="#" method="get">
                     <div>
-                        <input type="text" id="keyword" name="keyword" placeholder="複数キーワード可"
+                        <input type="text" id="keyword" name="keyword" placeholder="記事タイトル"
                                value="{{ keywords }}">
                         <button type="submit">検索</button>
                     </div>
@@ -61,7 +39,6 @@
             </div>
         </div>
     </div>
-
-
+</main>
 
 {% endblock content %}
