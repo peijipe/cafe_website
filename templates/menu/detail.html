@@ -10,6 +10,7 @@
                 <h1>{{ course.name }}</h1>
                 <p>{{ course.text|linebreaks }}</p>
                 <a class="btn btn-primary" href="{% url 'reserve:index' %}" role="button">予約する</a>
+                <hr>
                 {% endfor %}
 
             </div>
