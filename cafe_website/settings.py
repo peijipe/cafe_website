@@ -23,9 +23,9 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = 'kbzw6rx=+1626%3w&3*1zx36ywms11@($=b7pz#3x3z(=#he@-'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+# DEBUG = True
 
-ALLOWED_HOSTS = ['localhost', '127.0.0.1', '.pythonanywhere.com']
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
@@ -42,7 +42,6 @@ INSTALLED_APPS = [
     'stdimage',
     'menu',
     'reserve',
-    'tempus_dominus',
 ]
 
 MIDDLEWARE = [
@@ -135,3 +134,14 @@ STATICFILES_DIRS = (
 MEDIA_ROOT = BASE_DIR
 MEDIA_URL = '/'
 
+
+DEBUG = False
+
+try:
+    from .local_settings import *
+except ImportError:
+    pass
+
+if not DEBUG:
+    import django_heroku
+    django_heroku.settings(locals())

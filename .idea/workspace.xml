@@ -2,11 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b3da3ed3-25fb-429d-803f-e59093dd9c3a" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/news/migrations/0003_auto_20181012_0901.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/news/migrations/0004_auto_20181012_1241.py" beforeDir="false" afterPath="$PROJECT_DIR$/news/migrations/0003_auto_20181012_1241.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/news/migrations/0005_auto_20181012_1817.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/news/migrations/0005_auto_20181012_1817.py" beforeDir="false" afterPath="$PROJECT_DIR$/news/migrations/0004_auto_20181012_1817.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/menu/detail.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/menu/detail.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cafe_website/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/cafe_website/settings.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -33,15 +31,17 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
+          <entry key="Procfile" value="1" />
           <entry key="css" value="5" />
-          <entry key="gitignore" value="2" />
+          <entry key="gitignore" value="3" />
           <entry key="html" value="147" />
           <entry key="iml" value="1" />
           <entry key="js" value="4" />
           <entry key="png" value="2" />
-          <entry key="py" value="175" />
+          <entry key="py" value="177" />
           <entry key="rnc" value="3" />
           <entry key="sqlite3" value="1" />
+          <entry key="txt" value="3" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
@@ -51,25 +51,26 @@
           <entry key="IDEA_MODULE" value="1" />
           <entry key="Image" value="2" />
           <entry key="JavaScript" value="4" />
-          <entry key="PLAIN_TEXT" value="3" />
-          <entry key="Python" value="175" />
+          <entry key="PLAIN_TEXT" value="8" />
+          <entry key="Python" value="177" />
           <entry key="RNG Compact" value="3" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
+          <entry key="Procfile" value="12" />
           <entry key="dummy" value="2" />
-          <entry key="gitignore" value="8" />
+          <entry key="gitignore" value="9" />
           <entry key="html" value="10443" />
-          <entry key="py" value="11269" />
-          <entry key="txt" value="484" />
+          <entry key="py" value="11296" />
+          <entry key="txt" value="515" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="HTML" value="10443" />
-          <entry key="PLAIN_TEXT" value="494" />
-          <entry key="Python" value="11269" />
+          <entry key="PLAIN_TEXT" value="538" />
+          <entry key="Python" value="11296" />
         </counts>
       </usages-collector>
     </session>
@@ -77,81 +78,28 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/reserve/views.py">
+        <entry file="file://$PROJECT_DIR$/cafe_website/settings.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="170">
-              <caret line="67" selection-start-line="67" selection-end-line="67" />
-              <folding>
-                <element signature="e#0#45#0" expanded="true" />
-                <marker date="1542241274459" expanded="true" signature="341:593" ph="..." />
-                <marker date="1542241274459" expanded="true" signature="625:1257" ph="..." />
-                <marker date="1542241274459" expanded="true" signature="2528:2531" ph="..." />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/templates/reserve/detail.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="238">
-              <caret line="38" column="52" lean-forward="true" selection-start-line="38" selection-start-column="52" selection-end-line="38" selection-end-column="52" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/news/migrations/0003_auto_20181012_1241.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="136">
-              <caret line="9" column="44" lean-forward="true" selection-start-line="9" selection-start-column="44" selection-end-line="9" selection-end-column="44" />
+            <state relative-caret-position="241">
+              <caret line="137" column="13" lean-forward="true" selection-start-line="137" selection-start-column="13" selection-end-line="137" selection-end-column="13" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/news/migrations/0004_auto_20181012_1817.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="136">
-              <caret line="9" column="22" selection-start-line="9" selection-start-column="22" selection-end-line="9" selection-end-column="22" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/news/views.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="309">
-              <caret line="16" selection-start-line="16" selection-end-line="16" />
-              <folding>
-                <element signature="e#0#35#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/manage.py">
-          <provider selected="true" editor-type-id="text-editor" />
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/mainpage/urls.py">
+        <entry file="file://$PROJECT_DIR$/.gitignore">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="119">
-              <caret line="7" selection-start-line="7" selection-end-line="7" />
-              <folding>
-                <element signature="e#0#28#0" expanded="true" />
-              </folding>
+              <caret line="7" column="17" lean-forward="true" selection-start-line="7" selection-start-column="17" selection-end-line="7" selection-end-column="17" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/templates/menu/detail.html">
+        <entry file="file://$PROJECT_DIR$/cafe_website/local_settings.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="204">
-              <caret line="12" column="20" selection-start-line="12" selection-start-column="20" selection-end-line="12" selection-end-column="20" />
+            <state relative-caret-position="68">
+              <caret line="4" column="16" lean-forward="true" selection-start-line="4" selection-start-column="16" selection-end-line="4" selection-end-column="16" />
             </state>
           </provider>
         </entry>
@@ -161,8 +109,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Python Script" />
         <option value="HTML File" />
+        <option value="Python Script" />
       </list>
     </option>
   </component>
@@ -177,6 +125,7 @@
       <find>panel-menu02</find>
       <find>autoclose</find>
       <find>jq</find>
+      <find>static_</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -185,10 +134,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/.gitignore" />
-        <option value="$PROJECT_DIR$/news/form.py" />
-        <option value="$PROJECT_DIR$/news/admin.py" />
-        <option value="$PROJECT_DIR$/mainpage/templates/mainpage/index.html" />
         <option value="$PROJECT_DIR$/manage.py" />
         <option value="$PROJECT_DIR$/news/urls.py" />
         <option value="$PROJECT_DIR$/../../Lib/site-packages/django_thumbs/db/models.py" />
@@ -226,7 +171,6 @@
         <option value="$PROJECT_DIR$/reserve/views.py" />
         <option value="$PROJECT_DIR$/templates/reserve/edit.html" />
         <option value="$PROJECT_DIR$/templates/reserve/reserve_new.html" />
-        <option value="$PROJECT_DIR$/cafe_website/settings.py" />
         <option value="$PROJECT_DIR$/reserve/admin.py" />
         <option value="$PROJECT_DIR$/reserve/models.py" />
         <option value="$PROJECT_DIR$/templates/news/index.html" />
@@ -236,12 +180,17 @@
         <option value="$PROJECT_DIR$/templates/menu/detail.html" />
         <option value="$PROJECT_DIR$/news/migrations/0003_auto_20181012_1241.py" />
         <option value="$PROJECT_DIR$/news/migrations/0004_auto_20181012_1817.py" />
+        <option value="$PROJECT_DIR$/runtime.txt" />
+        <option value="$PROJECT_DIR$/Procfile" />
+        <option value="$PROJECT_DIR$/cafe_website/local_settings.py" />
+        <option value="$PROJECT_DIR$/cafe_website/settings.py" />
+        <option value="$PROJECT_DIR$/.gitignore" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="193" />
-    <option name="y" value="31" />
+    <option name="x" value="862" />
+    <option name="y" value="67" />
     <option name="width" value="1539" />
     <option name="height" value="1179" />
   </component>
@@ -261,24 +210,7 @@
             <path>
               <item name="cafe_website" type="b2602c69:ProjectViewProjectNode" />
               <item name="cafe_website" type="462c0819:PsiDirectoryNode" />
-              <item name="news" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="cafe_website" type="b2602c69:ProjectViewProjectNode" />
               <item name="cafe_website" type="462c0819:PsiDirectoryNode" />
-              <item name="news" type="462c0819:PsiDirectoryNode" />
-              <item name="migrations" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="cafe_website" type="b2602c69:ProjectViewProjectNode" />
-              <item name="cafe_website" type="462c0819:PsiDirectoryNode" />
-              <item name="templates" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="cafe_website" type="b2602c69:ProjectViewProjectNode" />
-              <item name="cafe_website" type="462c0819:PsiDirectoryNode" />
-              <item name="templates" type="462c0819:PsiDirectoryNode" />
-              <item name="reserve" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -568,11 +500,18 @@
       <option name="project" value="LOCAL" />
       <updated>1542363420121</updated>
     </task>
-    <option name="localTasksCounter" value="35" />
+    <task id="LOCAL-00035" summary="edit_news_migrationFiles">
+      <created>1542417476695</created>
+      <option name="number" value="00035" />
+      <option name="presentableId" value="LOCAL-00035" />
+      <option name="project" value="LOCAL" />
+      <updated>1542417476695</updated>
+    </task>
+    <option name="localTasksCounter" value="36" />
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="129" y="21" width="1026" height="786" extended-state="0" />
+    <frame x="575" y="45" width="1026" height="786" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Favorites" order="0" side_tool="true" />
@@ -598,7 +537,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="make_MenuPage" />
     <MESSAGE value="edit_MenuPage,edit_menu.model" />
     <MESSAGE value="make_CourseDetailPage" />
     <MESSAGE value="make_information" />
@@ -623,7 +561,8 @@
     <MESSAGE value="edit_reserve" />
     <MESSAGE value="edit_newsPage" />
     <MESSAGE value="edit_mainPage" />
-    <option name="LAST_COMMIT_MESSAGE" value="edit_mainPage" />
+    <MESSAGE value="edit_news_migrationFiles" />
+    <option name="LAST_COMMIT_MESSAGE" value="edit_news_migrationFiles" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -640,16 +579,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/menu/migrations/0002_menu_category.py" />
-    <entry file="file://$PROJECT_DIR$/menu/migrations/0003_auto_20181017_1547.py" />
-    <entry file="file://$PROJECT_DIR$/reserve/templates/reserve/index.html" />
-    <entry file="file://$PROJECT_DIR$/static/js/jquery-3.3.1.slim.min.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" lean-forward="true" selection-start-line="2" selection-end-line="2" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/static/js/bootstrap-datepicker.min.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="102">
@@ -736,9 +665,6 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/templates/reserve/index_2.html" />
-    <entry file="file://$PROJECT_DIR$/.gitignore">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/mainpage/models.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="189">
@@ -831,13 +757,6 @@
           <folding>
             <element signature="e#0#28#0" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/cafe_website/settings.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="346">
-          <caret line="27" column="30" selection-start-line="27" selection-start-column="30" selection-end-line="27" selection-end-column="30" />
         </state>
       </provider>
     </entry>
@@ -936,13 +855,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/reserve/detail.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="38" column="52" lean-forward="true" selection-start-line="38" selection-start-column="52" selection-end-line="38" selection-end-column="52" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/news/migrations/0003_auto_20181012_1241.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="136">
@@ -954,6 +866,51 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="136">
           <caret line="9" column="22" selection-start-line="9" selection-start-column="22" selection-end-line="9" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/reserve/detail.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="38" column="52" lean-forward="true" selection-start-line="38" selection-start-column="52" selection-end-line="38" selection-end-column="52" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/requirements.txt">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Procfile">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="26" selection-start-column="26" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/runtime.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="12" selection-start-column="12" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/cafe_website/local_settings.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="4" column="16" lean-forward="true" selection-start-line="4" selection-start-column="16" selection-end-line="4" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/cafe_website/settings.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="241">
+          <caret line="137" column="13" lean-forward="true" selection-start-line="137" selection-start-column="13" selection-end-line="137" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="7" column="17" lean-forward="true" selection-start-line="7" selection-start-column="17" selection-end-line="7" selection-end-column="17" />
         </state>
       </provider>
     </entry>
